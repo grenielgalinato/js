@@ -1,0 +1,476 @@
+/* Animation of input when focus */
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  transition: .2s;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  transition: .2s;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  transition: .2s;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholde {
+  transition: .2s;
+}
+
+input:focus:-ms-input-placeholder,
+textarea:focus:-ms-input-placeholde {
+  opacity: 0;
+}
+
+input:focus::-moz-placeholder,
+textarea:focus::-moz-placeholder {
+  opacity: 0;
+}
+
+input:focus:-moz-placeholder,
+textarea:focus:-moz-placeholder {
+  opacity: 0;
+}
+
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+
+/* Disabled display of border when focus on element */
+*:focus {
+  outline: 0;
+}
+
+/* Make text look crisper and more legible in all browsers */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  padding-right: 0px !important;
+}
+
+/* Focus state style for keyboard navigation for the focusable elements */
+*[tabindex]:focus-visible,
+input[type="file"]:focus-visible {
+  outline: 0.125rem solid #4d65ff;
+  outline-offset: 0.125rem;
+}
+
+/* Get rid of top margin on first element in any rich text element */
+.w-richtext> :not(div):first-child,
+.w-richtext>div:first-child> :first-child {
+  margin-top: 0 !important;
+}
+
+/* Get rid of bottom margin on last element in any rich text element */
+.w-richtext>:last-child,
+.w-richtext ol li:last-child,
+.w-richtext ul li:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* Prevent all click and hover interaction with an element */
+.pointer-events-off {
+  pointer-events: none;
+}
+
+/* Enables all click and hover interaction with an element */
+.pointer-events-on {
+  pointer-events: auto;
+}
+
+/* Make sure containers never lose their center alignment */
+.container-medium,
+.container-small,
+.container-large {
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-text-fill-color: #080808 !important;
+  -webkit-box-shadow: 0 0 0px 1000px #f5f5f5 inset !important;
+  background-color: #f5f5f5 !important;
+}
+
+a,
+.w-select,
+.w-tab-link,
+.w-nav-link,
+.w-dropdown-btn,
+.w-dropdown-toggle,
+.w-dropdown-link {
+  color: inherit;
+  text-decoration: inherit;
+  font-size: inherit;
+}
+
+/* Apply "..." after 3 lines of text */
+.text-style-3lines {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+/* Apply "..." after 2 lines of text */
+.text-style-2lines {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* Adds inline flex display */
+.display-inlineflex {
+  display: inline-flex;
+}
+
+/* These classes are never overwritten */
+.hide {
+  display: none !important;
+}
+
+@media screen and (max-width: 991px) {
+
+  .hide,
+  .hide-tablet {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hide-mobile-landscape {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
+/*Fluid responsive */
+html {
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 1920px) {
+  html {
+    font-size: .8vw;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1919px) {
+  html {
+    font-size: 1vw;
+  }
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px) {
+  html {
+    font-size: 1vw;
+  }
+}
+
+.calendly-popup-close {
+  z-index: 1000000;
+}
+
+.email-link:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 0.0625rem;
+  background: currentColor;
+  will-change: transform;
+  transform-origin: 100% 100%;
+  transform: scaleX(0);
+  pointer-events: none;
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(.215, .61, .355, 1);
+  transition-duration: .5s
+}
+
+.email-link:hover:after {
+  transform-origin: 0 0;
+  transform: scaleX(1);
+}
+
+.social-footer-wrap {
+  transition: transform 0.4s ease-out;
+  will-change: transform;
+}
+
+.faq-question-label {
+  white-space: normal;
+}
+
+@media (min-width: 767px) {
+  .awards-bg {
+    transition: height 0.5s ease;
+  }
+
+  .awards-img {
+    opacity: 0;
+    transform: scale(0.7);
+    transition: transform 0.6s ease, opacity 0.6s ease;
+  }
+
+  .heading-5 {
+    transition: color 0.5s ease;
+  }
+
+  .awards-desc-1,
+  .awards-date {
+    transition: color 0.5s ease;
+  }
+
+  .awards-desc-2 {
+    transition: color 0.5s ease;
+  }
+
+  .awards-list-item:hover .awards-bg {
+    height: 100%;
+  }
+
+  .awards-list-item:hover .awards-img {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .awards-list-item:hover .heading-5,
+  .awards-list-item:hover .awards-desc-2 {
+    color: #fff;
+  }
+
+  .awards-list-item:hover .awards-desc-1,
+  .awards-list-item:hover .awards-date {
+    color: #737373;
+  }
+}
+
+@media (min-width: 767px) {
+  .startup-list-item:hover .client-logo-hover {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.w-background-video-atom2 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.w-background-video-atom2 video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+#cards:hover>.service-card::after {
+  opacity: 1;
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+.service-card::before,
+.service-card::after {
+  border-radius: inherit;
+  content: "";
+  height: 100%;
+  left: 0px;
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  transition: opacity 500ms;
+  width: 100%;
+}
+
+.service-card::before {
+  background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.06), transparent 20%);
+  z-index: 3;
+}
+
+.service-card::after {
+  background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.08), transparent 20%);
+  z-index: 1;
+}
+
+.hero-tag {
+  background: radial-gradient(185.4% 106.06% at 66.51% 82.61%, #131111 0%, #262222 100%);
+}
+
+.left-stat-gradient {
+  background: linear-gradient(-270deg, #080808 40.7%, rgba(8, 8, 8, 0.00) 100%);
+}
+
+.right-stat-gradient {
+  background: linear-gradient(270deg, #080808 40.7%, rgba(8, 8, 8, 0.00) 100%);
+}
+
+.hero-tag {
+  background: radial-gradient(185.4% 106.06% at 66.51% 82.61%, #131111 0%, #262222 100%);
+}
+
+.nav-new {
+  transition: background-color 0.3s ease;
+}
+
+.logo-white,
+.logo-black {
+  transition: opacity 0.3s ease, z-index 0.3s ease;
+}
+
+/* Hide webflow badge */
+.w-webflow-badge {
+  display: none !important;
+}
+
+/* Scroll */
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+#page-transition {
+  position: fixed;
+  bottom: 0;
+  /* Начальная позиция на экране */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #404040;
+  /* Цвет фона */
+  z-index: 99999;
+  transition: bottom 0.9s ease;
+  /* Плавный переход */
+}
+
+.awards-list-2-item:hover {
+  cursor: url("images/cursor.png"),
+    auto;
+}
+.w-background-video-atom {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.w-background-video-atom video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.w-background-video-atom2 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.w-background-video-atom2 video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.custom-cursor {
+  display: none;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  width: 194px;
+  height: 194px;
+  pointer-events: none;
+  background-image: url("images/cursor-service.svg");
+  background-size: cover;
+  z-index: 9999;
+}
+
+.custom-cursor-2 {
+  display: none;
+  position: fixed;
+  transform: translate(-53%, -53%);
+  width: 194px;
+  height: 194px;
+  pointer-events: none;
+  background-image: url("images/cursor-purple.svg");
+  background-size: cover;
+  z-index: 9999;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+.heading-2,
+.icon-clutch-full-icon,
+.first-line-testimonial,
+.icon-clutch-small,
+.heading-wrap-testimonial,
+.icon-clutch-full {
+  transition: all 0.7s ease;
+  /* Общий переход для плавной анимации */
+}
+
+@media (max-width:767px) and (min-width:480px) {
+  html.w-mod-js:not(.w-mod-ix) [data-w-id="e44d9f8a-7fe6-5877-f621-38bedc1bcf41"] {
+    -webkit-transform: translate3d(0, -50%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+    -moz-transform: translate3d(0, -50%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+    -ms-transform: translate3d(0, -50%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+    transform: translate3d(0, -50%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+  }
+}
+
+@media (max-width:479px) {
+  html.w-mod-js:not(.w-mod-ix) [data-w-id="e44d9f8a-7fe6-5877-f621-38bedc1bcf41"] {
+    -webkit-transform: translate3d(0, -50%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+    -moz-transform: translate3d(0, -50%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+    -ms-transform: translate3d(0, -50%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+    transform: translate3d(0, -50%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+  }
+}
